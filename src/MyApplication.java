@@ -11,12 +11,14 @@ public class MyApplication {
 
         Scanner sc = new Scanner(file);
 
+        Shape shape = new Shape();
+
         while (sc.hasNext()) {
             double x = sc.nextDouble();
             double y = sc.nextDouble();
 
             Point point = new Point(x, y);
-//            shape.addPoint(point);
+            shape.addPoint(point);
         }
     }
 }
