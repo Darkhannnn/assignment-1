@@ -17,9 +17,25 @@ public class Shape {
     }
 
     // calculatePerimeter()
+    public double calculatePerimeter() {
+        double perimeter = 0;
+        int numOfPoints = points.size();
 
+        for (int i = 0; i < numOfPoints; i++) {
+            Point currentPoint = points.get(i);
+            Point nextPoint = points.get((i + 1) % numOfPoints);
+            perimeter += currentPoint.distance(nextPoint);
+        }
+        return perimeter;
+    }
 
     // getAverageSide()
+    public double getAverageSide() {
+        return calculatePerimeter()/points.size();
+    }
 
     // getLongestSide()
+//    public double getLongest() {
+//        return 0;
+//    }
 }

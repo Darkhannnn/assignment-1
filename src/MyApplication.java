@@ -20,5 +20,9 @@ public class MyApplication {
             Point point = new Point(x, y);
             shape.addPoint(point);
         }
+
+        System.out.println(shape.calculatePerimeter());
+        System.out.println(shape.getAverageSide());
+//        System.out.println(shape.getLongest());
     }
 }
